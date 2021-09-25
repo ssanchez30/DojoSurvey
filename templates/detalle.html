@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/styles.css')}}" />
+    <title>Detalle Page</title>
+</head>
+
+<body>
+
+    <section class="section2">
+        <div class="container">
+
+            <h1 class="detalleh1">{{session['nombre']}}</h1>
+            <p>Género: {{context['genero']}}</p>
+            <p>Dojo Location: {{context['location']}}</p>
+            <p>Favorite Language: {{context['language']}}</p>
+
+            {% if context['cant'] != 0: %}
+
+            <p>Hobbies:</p>
+
+            <ul>
+                {% for i in range(0, context['cant']) %}
+                <li>{{context['hobbies'][i]}}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+
+            <p>Comments: {{context['comment']}}</p>
+
+            <div class="btnHomeDiv">
+                <button class="btnHome">Home</button>
+            </div>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='./js/script.js') }}
+    "></script>
+</body>
+
+</html>

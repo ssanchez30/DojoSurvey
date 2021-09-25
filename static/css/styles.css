@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+}
+
+.container{
+    margin: 2.5em 0;
+    background-color: #343a3f;
+    width: 50%;
+}
+h1{
+margin: 2em 0 0 3.5em;
+color: #fec008;
+    
+}
+
+label{
+    color: white;
+    padding: 1em 0 0 0.5em;
+    margin-bottom: 1em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5em 5em 5em;
+}
+
+input, select{
+    height: 2.5em;
+    padding-left: 0.5em;
+}
+
+.btnSubmitDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+textarea{
+    padding: 0.5em 0 0 0.5em;
+}
+
+.btnSubmit{
+    margin-top: 0.9375em;
+    padding: 0.3125em 0.5em;
+    background-color: #fec008;
+    color: #343a3f;
+    border-radius: 5px;
+}
+
+.btnSubmit:hover{
+    cursor: pointer;
+    background-color: #ac8309;
+}
+
+.detalleh1{
+    margin: 0 0 0 1em;
+    color: #057afd;
+    padding: 1em 0 0.7em 0.5em;
+    font-size: xx-large;
+}
+
+.btnHome{
+    color: #057afd;
+    outline: none;
+    border: none;
+    background-color: #343a3f;
+    border-radius: 0;
+    margin-top: 0.875em;
+    padding-left: 1em;
+    padding-bottom: 1.25em;
+}
+
+.btnHome:hover{
+    color: #74b0f5;
+    cursor: pointer;
+}
+
+p{
+    color: white;
+    padding: 0.3125em 0 0.625em 3em;
+}
+
+.section2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+}
+
+.btnHomeDiv{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    align-content: center;
+    border-top: white 1px solid;
+    margin: 0 2.5em;
+}
+
+.generoMF{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#femenino{
+    margin-left: 0.625em;
+}
+
+.hobbies{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hobbies > #videoGames, #sport{
+    margin-left: 1.875em;
+}
+
+ul{
+    margin-left: 5em;
+}
+
+li{
+    color: white;
+    margin-bottom: 0.625em;
+}
