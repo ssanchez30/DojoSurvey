@@ -14,32 +14,28 @@
     <section class="section2">
         <div class="container">
 
-            <h1 class="detalleh1">{{session['nombre']}}</h1>
-            <p>Género: {{context['genero']}}</p>
-            <p>Dojo Location: {{context['location']}}</p>
-            <p>Favorite Language: {{context['language']}}</p>
+            <h1 class="detalleh1">{{session['datos']['name']}}</h1>
+            <p>Género: {{session['datos']['genero']}}</p>
+            <p>Dojo Location: {{session['datos']['location']}}</p>
+            <p>Favorite Language: {{session['datos']['language']}}</p>
 
-            {% if context['cant'] != 0: %}
-
+            {% if session['datos']['cant'] != 0: %}
             <p>Hobbies:</p>
-
             <ul>
-                {% for i in range(0, context['cant']) %}
-                <li>{{context['hobbies'][i]}}</li>
+                {% for i in range(0, session['datos']['cant']) %}
+                <li>{{session['datos']['hobbies'][i]}}</li>
                 {% endfor %}
             </ul>
             {% endif %}
 
-
-            <p>Comments: {{context['comment']}}</p>
+            <p>Comments: {{session['datos']['comment']}}</p>
 
             <div class="btnHomeDiv">
                 <button class="btnHome">Home</button>
             </div>
         </div>
     </section>
-    <script src="{{ url_for('static', filename='./js/script.js') }}
-    "></script>
+    <script src="{{ url_for('static', filename='./js/script.js') }}"></script>
 </body>
 
 </html>

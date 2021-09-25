@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect
 
 app = Flask(__name__)
 app.secret_key = "secret"
@@ -29,9 +29,14 @@ def registration():
         "cant": cant
     }
 
-    session['nombre'] = name
+    session['datos'] = context
 
-    return render_template('detalle.html', context=context)
+    return redirect('/detalle')
+
+
+@app.route('/detalle', methods=['GET'])
+def detalle():
+    return render_template('detalle.html')
 
 
 if __name__ == "__main__":
