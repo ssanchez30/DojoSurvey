@@ -1,5 +1,8 @@
 let btnHome = document.querySelector('.btnHome')
+let idForm = document.getElementById('idForm').getAttribute("value")
 
-btnHome.addEventListener('click', () => {
-    window.location.href = '/';
-});
+if (idForm === '2') {
+    btnHome.addEventListener('click', () => {
+        window.location.href = '/';
+    });
+}
